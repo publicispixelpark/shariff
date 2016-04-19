@@ -2,7 +2,7 @@
     li {
         min-width: 110px;
         max-width: 160px;
-        .share_text {
+        .shariff__share-text {
             text-indent: 0;
             display: inline;
         }
@@ -35,8 +35,8 @@
             text-decoration: none;
             box-sizing: border-box;
         }
-        .share_text,
-        .share_count {
+        .shariff__share-text,
+        .shariff__share-count {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             vertical-align: middle;
@@ -48,7 +48,7 @@
             text-align: center;
             vertical-align: middle;
         }
-        .share_count {
+        .shariff__share-count {
             padding: 0 8px;
             height: 33px;
             position: absolute;
@@ -58,17 +58,17 @@
     }
 
     // ------------- horizontal alignment (standard)
-    .orientation-horizontal {
+    .shariff__button-list--orientation-horizontal {
         /* autoprefixer: off */
         display: -webkit-box;
         li {
             -webkit-box-flex: 1;
         }
-        .info {
+        .shariff__button--info {
             -webkit-box-flex: 0;
         }
     }
-    .orientation-horizontal {
+    .shariff__button-list--orientation-horizontal {
         display: flex;
         flex-wrap: wrap;
         li {
@@ -80,25 +80,25 @@
             &:last-child {
                 margin-right: 0;
             }
-            .share_text {
+            .shariff__share-text {
                 display: block;
                 text-indent: -9999px;
                 padding-left: 3px;
             }
-            .share_count {
-                display: none;                
+            .shariff__share-count {
+                display: none;
             }
         }
     }
 
     // ------------------------- colourless design
 
-    .theme-grey {
-        .shariff-button {
+    .shariff__button-list--theme-grey {
+        .shariff__button {
             a {
                 background-color: #b0b0b0;
             }
-            .share_count {
+            .shariff__share-count {
                 background-color: #ccc;
                 color: #333;
             }
@@ -107,8 +107,8 @@
 
     // ------------------------- even less colorful design
 
-    .theme-white {
-        .shariff-button {
+    .shariff__button-list--theme-white {
+        .shariff__button {
             border: 1px solid #ddd;
             a {
                 background-color: #fff;
@@ -116,7 +116,7 @@
                     background-color: #eee;
                 }
             }
-            .share_count {
+            .shariff__share-count {
                 background-color: #fff;
                 color: #999;
             }
@@ -125,13 +125,13 @@
 
     // ------------------------- vertical alignment
 
-    .orientation-vertical {
+    .shariff__button-list--orientation-vertical {
         min-width: 110px;
         li {
             display: block;
             width: 100%;
             margin: 5px 0;
-            .share_count {
+            .shariff__share-count {
                 width: 24px;
                 text-align: right;
             }
@@ -142,20 +142,20 @@
 // ---------------  adjustments for small devices
 
 @media only screen and (min-width: 360px) {
-    .shariff .orientation-horizontal {
+    .shariff .shariff__button-list--orientation-horizontal {
         li {
             margin-right: 1.8%;
             min-width: 80px;
             width: auto;
             flex: 1;
-            .share_count {
+            .shariff__share-count {
                 display: block;
             }
         }
-        &.col-1, &.col-2 {
+        &.shariff__button-list--col-1, &.shariff__button-list--col-2 {
             .display-share-text;
         }
-        &.col-5, &.col-6 {
+        &.shariff__button-list--col-5, &.shariff__button-list--col-6 {
             li {
                 flex: none;
             }
@@ -164,15 +164,15 @@
 }
 
 @media only screen and (min-width: 640px) {
-    .shariff .orientation-horizontal.col-3 {
+    .shariff .shariff__button-list--orientation-horizontal.shariff__button-list--col-3 {
         .display-share-text;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .shariff .orientation-horizontal {
+    .shariff .shariff__button-list--orientation-horizontal {
         .display-share-text;
-        &.col-5, &.col-6 {
+        &.shariff__button-list--col-5, &.shariff__button-list--col-6 {
             li {
                 flex: 1;
             }
@@ -189,15 +189,15 @@
             a {
                 height: 30px;
             }
-            .fa {
+            .shariff__fa {
                 width: 30px;
                 line-height: 30px;
             }
-            .share_text,
-            .share_count {
+            .shariff__share-text,
+            .shariff__share-count {
                 line-height: 30px;
             }
-            .share_count {
+            .shariff__share-count {
                 height: 28px;
             }
         }

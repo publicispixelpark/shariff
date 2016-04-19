@@ -1,5 +1,5 @@
 .shariff {
-    .info {
+    .shariff__button--info {
         border: 1px solid #ccc;
         a {
             color: #666;
@@ -12,21 +12,21 @@
             font-size: 20px;
             width: 33px;
         }
-        .share_text {
+        .shariff__share-text {
             display: block !important;
             text-indent: -9999px !important;
         }
     }
-    .theme-grey {
-        .info a {
+    .shariff__button-list--theme-grey {
+        .shariff__button--info a {
             background-color: #fff;
             &:hover {
                 background-color: #efefef;
             }
         }
     }
-    .orientation-vertical {
-        .info {
+    .shariff__button-list--orientation-vertical {
+        .shariff__button--info {
             width: 35px;
             float: right;
         }
@@ -34,7 +34,7 @@
 }
 
 @media only screen and (min-width: 360px) {
-    .shariff .orientation-horizontal .info {
+    .shariff .shariff__button-list--orientation-horizontal .shariff__button--info {
         flex: none !important;
         width: 35px;
         min-width: 35px !important;
@@ -43,15 +43,15 @@
 
 @media only screen and (min-width: 1024px) {
     .shariff {
-        .info .fa-info {
+        .shariff__button--info .fa-info {
             font-size: 16px;
             width: 23px;
         }
-        .orientation-horizontal .info {
+        .shariff__button-list--orientation-horizontal .shariff__button--info {
             width: 25px;
             min-width: 25px !important;
         }
-        .orientation-vertical .info {
+        .shariff__button-list--orientation-vertical .shariff__button--info {
             width: 25px;
         }
     }

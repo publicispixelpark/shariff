@@ -186,7 +186,7 @@ Shariff.prototype = {
             if(value >= 1000) {
                 value = Math.round(value / 1000) + 'k';
             }
-            $(self.element).find('.' + key + ' a').append('&nbsp;<span class="share_count">' + value);
+            $(self.element).find('.' + key + ' a').append('&nbsp;<span class="shariff__share-count">' + value);
         });
     },
 
@@ -196,16 +196,16 @@ Shariff.prototype = {
 
         var $socialshareElement = this.$socialshareElement();
 
-        var themeClass = 'theme-' + this.options.theme;
-        var orientationClass = 'orientation-' + this.options.orientation;
-        var serviceCountClass = 'col-' + this.options.services.length;
+        var themeClass = 'shariff__button-list--theme-' + this.options.theme;
+        var orientationClass = 'shariff__button-list--orientation-' + this.options.orientation;
+        var serviceCountClass = 'shariff__button-list--col-' + this.options.services.length;
 
-        var $buttonList = $('<ul>').addClass(themeClass).addClass(orientationClass).addClass(serviceCountClass);
+        var $buttonList = $('<ul class="shariff__button-list">').addClass(themeClass).addClass(orientationClass).addClass(serviceCountClass);
 
         // add html for service-links
         this.services.forEach(function(service) {
-            var $li = $('<li class="shariff-button">').addClass(service.name);
-            var $shareText = '<span class="share_text">' + self.getLocalized(service, 'shareText');
+            var $li = $('<li class="shariff__button">').addClass( 'shariff__button--' + service.name);
+            var $shareText = '<span class="shariff__share-text">' + self.getLocalized(service, 'shareText');
 
             var $shareLink = $('<a>')
               .attr('href', service.shareUrl)
