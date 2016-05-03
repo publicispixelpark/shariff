@@ -123,7 +123,7 @@ Shariff.prototype = {
                 url = canonical;
             }
 
-            return url;
+            return url + '?mc=socialshare-v2';
         }
     },
 
